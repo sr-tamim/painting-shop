@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Tailwindcss and fonts -->
+  <link rel="stylesheet" href="stylesheets/tailwind.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet" />
+  <!-- Custom styling -->
+  <style>
+    body {
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .selected {
+      border: 1px solid purple;
+    }
+  </style>
+  <title>E - Painting</title>
+</head>
+
+<body class="h-full w-full absolute md:flex items-center">
+  <main class="w-full py-10">
+    <h1 class="text-3xl md:text-6xl font-bold text-center mb-8">An Online Painting Shop</h1>
+    <div class="container mx-auto px-4 md:px-2">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <!-- Image -->
+        <div class="h-full flex items-center">
+          <div class="h-96 w-full border rounded border-gray-200 p-5">
+            <img src="images/1.jpg" id="art" class="w-full rounded h-full object-cover" />
+          </div>
+        </div>
+        <!-- Options -->
+        <div class="mt-10 max-w-lg mx-auto flex flex-col justify-between">
+          <span id="desc" class="text-lg text-gray-700"></span>
+          <div class="text-3xl">$<span id="product-price"></span></div>
+          <div class="flex justify-around items-center mt-12 mb-5" id="options">
+            <div class="
+                  mx-2
+                  border
+                  cursor-pointer
+                  shadow-lg
+                  hover:border-purple-600 hover:shadow-2xl
+                  rounded
+                  selected
+                " id="first">
+              <img src="images/1.jpg" class="w-28 h-28 p-3" alt="" />
+            </div>
+            <div class="
+                  mx-2
+                  border
+                  cursor-pointer
+                  shadow-lg
+                  hover:border-purple-600 hover:shadow-2xl
+                  rounded
+                " id="second">
+              <img src="images/2.jpg" class="w-28 h-28 p-3" alt="" />
+            </div>
+            <div class="
+                  mx-2
+                  border
+                  cursor-pointer
+                  shadow-lg
+                  hover:border-purple-600 hover:shadow-2xl
+                  rounded
+                " id="third">
+              <img src="images/3.jpg" class="w-28 h-28 p-3" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div id="select-tax" class="grid grid-cols-2 mb-4 text-lg">
+          <div id="free" class="selected text-center py-5 px-3 m-5 shadow shadow-lg hover:shadow-xl cursor-pointer">Free
+            Shipping - 0$
+          </div>
+          <div id="express" class="text-center py-5 px-3 m-5 shadow shadow-lg hover:shadow-xl cursor-pointer">
+            Express Shipping -
+            30$</div>
+        </div>
+        <div class="text-right px-5 flex flex-col justify-center">
+          <div class="text-2xl">Tax: $<span id="tax-amount">0</span></div>
+          <div class="text-3xl font-bold">
+            Total: $<span id="total-price">750</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Custom js -->
+  <script src="script.js"></script>
+</body>
+
+</html>
